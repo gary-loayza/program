@@ -8,6 +8,7 @@ import numpy as np
 import connection
 import query
 import result
+import ftp
 
 live = connection.create('LIVE')
 
@@ -67,3 +68,5 @@ login = pd.read_sql(login_query,live)
 result.login(login, results)
 
 result.printr(results)
+
+ftp.transfer()
