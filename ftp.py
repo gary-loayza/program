@@ -14,7 +14,7 @@ def transfer():
     ftp.login(BRAD,BERRY)
     ftp.cwd('/MARKETING/MEMBER_MONTHLY_ANALYSIS/' + today.strftime("%Y"))
 
-    file = open('./output/Monthly_Member_Analysis_' + stamp + '.xlsx', 'rb')
+    file = open('/opt/program/output/Monthly_Member_Analysis_' + stamp + '.xlsx', 'rb')
 
     ftp.storbinary('STOR Monthly_Member_Analysis_'+stamp+'.xlsx', file)
 

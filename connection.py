@@ -8,8 +8,10 @@ import os
 
 def create(arg):
     """
-    env variable set in /opt/tljh/config/jupyterhub_config.d/environment.py
-    For root, env must be set in /etc/environment
+    Jupyter Notebook env variable set in:
+        /opt/tljh/config/jupyterhub_config.d/environment.py
+    Runtime env vars set in systemd unit program.service:
+        /etc/systemd/system/program.service
     """
     if arg == 'LIVE':
         LIVE = os.environ.get(arg)
