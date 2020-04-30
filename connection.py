@@ -9,6 +9,7 @@ import os
 def create(arg):
     """
     env variable set in /opt/tljh/config/jupyterhub_config.d/environment.py
+    For root, env must be set in /etc/environment
     """
     if arg == 'LIVE':
         LIVE = os.environ.get(arg)
@@ -18,7 +19,7 @@ def create(arg):
         TEST = os.environ.get(arg)
         t00 = sqlalchemy.create_engine(TEST)
         return t00
-    elif arg == 'QUART': 
+    elif arg == 'QUART':
         QUART = os.environ.get(arg)
         qtend = sqlalchemy.create_engine(QUART)
         return qtend
