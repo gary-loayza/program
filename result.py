@@ -6,6 +6,8 @@ import datetime as dt
 import pandas as pd
 import numpy as np
 
+import main
+
 today = dt.date.today()
 stamp =  today.strftime("%Y-%m-%d")
 
@@ -249,9 +251,9 @@ def printr(results):
     """
     Method for writing results DataFrames to spreadsheet
     """
-    with pd.ExcelWriter('/opt/program/output/Monthly_Member_Analysis_' + stamp + '.xlsx') as writer:
+    with pd.ExcelWriter('./output/Monthly_Member_Analysis_' + stamp + '.xlsx') as writer:
         for tab in results:
             results[tab].to_excel(writer, sheet_name=tab, index=False)
 
 if __name__ == "__main__":
-    print('To run this program, execute \'$ python main.py\'')
+   main.program()

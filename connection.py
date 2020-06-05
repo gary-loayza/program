@@ -6,6 +6,8 @@ import sqlalchemy
 import ibm_db_sa
 import os
 
+import main
+
 def create(arg):
     """
     Jupyter Notebook env variable set in:
@@ -29,4 +31,4 @@ def create(arg):
         print("No Valid DB connection was passed to main")
 
 if __name__ == "__main__":
-    create(arg)
+    main.program()

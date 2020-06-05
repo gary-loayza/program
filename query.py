@@ -2,6 +2,7 @@
 # Author: Gary Loayza       #
 # Date: 2020-04-29          #
 #############################
+import main
 
 def branch():
     query = '''
@@ -138,4 +139,4 @@ def login():
 
 
 if __name__ == "__main__":
-    print('To run this program, execute \'$ python main.py\'')
+    main.program()

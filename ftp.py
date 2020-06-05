@@ -2,6 +2,8 @@ import datetime as dt
 from ftplib import FTP
 import os
 
+import main
+
 today = dt.date.today()
 stamp =  today.strftime("%Y-%m-%d")
 
@@ -22,4 +24,4 @@ def transfer():
     ftp.quit()
 
 if __name__ == "__main__":
-    print('To run this program, execute \'$ python main.py\'')
+    main.program()
